@@ -47,7 +47,9 @@ if [[ "${STATIC}" !=  "1" ]];then
     LDFLAGS=""
 fi
 
-
+ls -lR /root/.ssh/
+chmod 400 /root/.ssh/*
+ls -lR /root/.ssh/
 env
 pwd
 
