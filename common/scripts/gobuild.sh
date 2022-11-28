@@ -48,7 +48,6 @@ if [[ "${STATIC}" !=  "1" ]];then
 fi
 
 env
-ls -lR ~/.ssh
 pwd
 
 time GOOS=${BUILD_GOOS} GOARCH=${BUILD_GOARCH} ${GOBINARY} build \
