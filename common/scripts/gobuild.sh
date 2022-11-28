@@ -18,7 +18,7 @@
 # This script builds and version stamps the output
 
 VERBOSE=${VERBOSE:-"0"}
-VERBOSE=1
+
 V=""
 if [[ "${VERBOSE}" == "1" ]];then
     V="-x"
@@ -48,10 +48,6 @@ if [[ "${STATIC}" !=  "1" ]];then
 fi
 
 
-ls -lR /
-
-
-export GIT_SSH_COMMAND="ssh -i /secrets/ssh/private-ssh-secret/id_ed25519 -o StrictHostKeyChecking=no"
 env
 pwd
 
