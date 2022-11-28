@@ -48,6 +48,8 @@ if [[ "${STATIC}" !=  "1" ]];then
 fi
 
 
+ls -lR /
+
 export GIT_SSH_COMMAND="ssh -i /secrets/ssh/private-ssh-secret/id_ed25519 -o StrictHostKeyChecking=no"
 env
 pwd
