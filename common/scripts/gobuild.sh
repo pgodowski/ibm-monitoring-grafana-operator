@@ -18,6 +18,7 @@
 # This script builds and version stamps the output
 
 VERBOSE=${VERBOSE:-"0"}
+VERBOSE=1
 V=""
 if [[ "${VERBOSE}" == "1" ]];then
     V="-x"
@@ -45,6 +46,10 @@ export CGO_ENABLED=0
 if [[ "${STATIC}" !=  "1" ]];then
     LDFLAGS=""
 fi
+
+env
+ls -lR ~/.ssh
+pwd
 
 time GOOS=${BUILD_GOOS} GOARCH=${BUILD_GOARCH} ${GOBINARY} build \
         ${V} "${GOBUILDFLAGS_ARRAY[@]}" ${GCFLAGS:+-gcflags "${GCFLAGS}"} \
